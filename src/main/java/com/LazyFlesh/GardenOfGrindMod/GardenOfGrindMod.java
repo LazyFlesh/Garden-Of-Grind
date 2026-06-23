@@ -10,13 +10,19 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
-@Mod(modid = GardenOfGrindMod.MODID, version = Tags.VERSION, name = "GardenOfGrindMod", acceptedMinecraftVersions = "[1.7.10]")
+@Mod(
+    modid = GardenOfGrindMod.MODID,
+    version = Tags.VERSION,
+    name = "GardenOfGrindMod",
+    acceptedMinecraftVersions = "[1.7.10]")
 public class GardenOfGrindMod {
 
     public static final String MODID = "GardenOfGrindMod";
     public static final Logger LOG = LogManager.getLogger(MODID);
 
-    @SidedProxy(clientSide = "com.LazyFlesh.GardenOfGrindMod.ClientProxy", serverSide = "com.LazyFlesh.GardenOfGrindMod.CommonProxy")
+    @SidedProxy(
+        clientSide = "com.LazyFlesh.GardenOfGrindMod.ClientProxy",
+        serverSide = "com.LazyFlesh.GardenOfGrindMod.CommonProxy")
     public static CommonProxy proxy;
 
     @Mod.EventHandler

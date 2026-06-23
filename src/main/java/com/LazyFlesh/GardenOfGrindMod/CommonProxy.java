@@ -1,5 +1,10 @@
 package com.LazyFlesh.GardenOfGrindMod;
 
+import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadEasyGoG;
+
+import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadGoG;
+import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadQuestlessGoG;
+import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadSkyblock;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -13,6 +18,14 @@ public class CommonProxy {
         Config.synchronizeConfiguration(event.getSuggestedConfigurationFile());
 
         GardenOfGrindMod.LOG.info("I am the Garden of Grind addon mod at version " + Tags.VERSION);
+
+        switch (Config.challengeMode) {
+            case 1 -> new LoadEasyGoG();
+            case 2 -> new LoadSkyblock();
+            case 3 -> new LoadQuestlessGoG();
+            default -> new LoadGoG();
+        }
+
     }
 
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)
