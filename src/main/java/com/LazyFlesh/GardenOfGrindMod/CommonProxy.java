@@ -1,10 +1,10 @@
 package com.LazyFlesh.GardenOfGrindMod;
 
 import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadEasyGoG;
-
 import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadGoG;
 import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadQuestlessGoG;
 import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadSkyblock;
+
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
