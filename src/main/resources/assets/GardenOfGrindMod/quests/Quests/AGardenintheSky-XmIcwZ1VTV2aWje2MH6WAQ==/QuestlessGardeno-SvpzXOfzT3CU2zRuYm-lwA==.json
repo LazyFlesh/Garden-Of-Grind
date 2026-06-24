@@ -1,5 +1,21 @@
 {
-  "preRequisites:9": {},
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 7593354573151879590,
+      "questIDLow:4": -4814119299924671027,
+      "type:1": 2
+    },
+    "1:10": {
+      "questIDHigh:4": 6446630247553846568,
+      "questIDLow:4": -9050849072832045210,
+      "type:1": 2
+    },
+    "2:10": {
+      "questIDHigh:4": -5515982052237161616,
+      "questIDLow:4": -5086924798876303495,
+      "type:1": 2
+    }
+  },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
@@ -12,7 +28,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "It\u0027s possible, by the way! \n\nThis makes no changes other than to disable quest rewards.\n\nReally.\n\nAll things are sourceable without relying on the questbook or bugs and glitches. \n\n[warn]This will run a one-time command to turn the mode to Questless Garden of Grind. \r\nYou can run this yourself at any point with /gog mode QuestlessGardenOfGrind[/warn]",
+      "desc:8": "Fun fact! It\u0027s possible with no changes (at least in 2.9)\n\nAs a matter of fact, choose this mode makes no changes to the game other than to disable qb rewards. \n\nShould it not be possible at some point in the future, the minimum possible changes will be made to make it possible again.\n\n\n\n[warn]This will run a one-time command to turn the mode to Questless Garden of Grind. \r\nYou can run this yourself at any point with /gog mode QuestlessGardenOfGrind or /gog mode 3[/warn]",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -49,8 +65,8 @@
       "visibility:8": "UNLOCKED"
     }
   },
-  "questIDHigh:4": 0,
-  "questIDLow:4": 0,
+  "questIDHigh:4": 5402757545849999216,
+  "questIDLow:4": -7720519487494052416,
   "rewards:9": {
     "0:10": {
       "command:8": "/say VAR_NAME Claimed a reward",

@@ -1,5 +1,21 @@
 {
-  "preRequisites:9": {},
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 7593354573151879590,
+      "questIDLow:4": -4814119299924671027,
+      "type:1": 2
+    },
+    "1:10": {
+      "questIDHigh:4": -5515982052237161616,
+      "questIDLow:4": -5086924798876303495,
+      "type:1": 2
+    },
+    "2:10": {
+      "questIDHigh:4": 5402757545849999216,
+      "questIDLow:4": -7720519487494052416,
+      "type:1": 2
+    }
+  },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
@@ -12,7 +28,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Ah, good old Garden of Grind. \n\nNo recipe changes, no qb reward changes... how quaint. \n\n\n[warn]This will run a one-time command to turn the mode to Garden of Grind. \nYou can run this yourself at any point with /gog mode GardenOfGrind[/warn]",
+      "desc:8": "Ah, good old Garden of Grind. \n\nNo recipe changes, no qb reward changes... how quaint. \n\n\n[warn]This will run a one-time command to turn the mode to Garden of Grind. \nYou can run this yourself at any point with /gog mode GardenOfGrind or /gog mode 0[/warn]",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,

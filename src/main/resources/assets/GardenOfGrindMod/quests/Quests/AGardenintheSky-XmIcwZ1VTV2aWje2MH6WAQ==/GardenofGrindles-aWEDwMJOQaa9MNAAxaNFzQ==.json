@@ -1,5 +1,21 @@
 {
-  "preRequisites:9": {},
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 6446630247553846568,
+      "questIDLow:4": -9050849072832045210,
+      "type:1": 2
+    },
+    "1:10": {
+      "questIDHigh:4": -5515982052237161616,
+      "questIDLow:4": -5086924798876303495,
+      "type:1": 2
+    },
+    "2:10": {
+      "questIDHigh:4": 5402757545849999216,
+      "questIDLow:4": -7720519487494052416,
+      "type:1": 2
+    }
+  },
   "properties:10": {
     "betterquesting:10": {
       "autoClaim:1": 0,
@@ -12,7 +28,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "No desire to grind for what can be hours, days, weeks? No shame in that. It can certainly get boring.\n\nThis makes changes to lighten the load (mostly by increasing rng chances) of several long grinds, like the scrapbox for olivine and green sapphire, tengam, and the initial cobblestone and wood. \n\nI\u0027d say the changes made here are light enough that it can be considered a normal GTNH run, but played in the sky unless you need something from the earth.\n\n[warn]This will run a one-time command to turn the mode to Garden of Grindless. \r\nYou can run this yourself at any point with /gog mode GardenOfGrindless[/warn]",
+      "desc:8": "No desire to grind for what can be hours, days, weeks? No shame in that. It can certainly get boring.\n\nThis makes changes to lighten the load (mostly by increasing rng chances) of several long grinds, like the scrapbox for olivine and green sapphire, tengam, and the initial cobblestone and wood. \n\nI\u0027d say the changes made here are light enough that it can be considered a normal GTNH run, but played in the sky unless you need something from the earth.\n\n[warn]This will run a one-time command to turn the mode to Garden of Grindless. \r\nYou can run this yourself at any point with /gog mode GardenOfGrindless or /gog mode 2[/warn]",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
