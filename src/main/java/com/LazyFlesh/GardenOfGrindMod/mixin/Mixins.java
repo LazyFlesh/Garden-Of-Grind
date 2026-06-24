@@ -96,7 +96,7 @@ public enum Mixins implements IMixins {
 
         @Override
         public @NotNull List<String> getMixins(Set<String> loadedMods) {
-            return IMixins.getEarlyMixins(Mixins.class, loadedMods);
+            return IMixins.getLateMixins(Mixins.class, loadedMods);
         }
     }
 

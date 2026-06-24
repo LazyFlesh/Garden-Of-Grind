@@ -3,6 +3,9 @@ package com.LazyFlesh.GardenOfGrindMod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.gtnewhorizon.gtnhlib.config.ConfigException;
+import com.gtnewhorizon.gtnhlib.config.ConfigurationManager;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -25,6 +28,14 @@ public class GardenOfGrindMod {
         clientSide = "com.LazyFlesh.GardenOfGrindMod.ClientProxy",
         serverSide = "com.LazyFlesh.GardenOfGrindMod.CommonProxy")
     public static CommonProxy proxy;
+
+    static {
+        try {
+            ConfigurationManager.registerConfig(GeneralConfig.class);
+        } catch (ConfigException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     @Mod.EventHandler
     // preInit "Run before anything else. Read your config, create blocks, items, etc, and register them with the

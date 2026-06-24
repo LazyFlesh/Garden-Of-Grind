@@ -26,7 +26,7 @@ public class GardenOfGrindCoreMod implements IEarlyMixinLoader, IFMLLoadingPlugi
 
     @Override
     public String[] getASMTransformerClass() {
-        return new String[] { "com.LazyFlesh.GardenOfGrindMod.coremod.GardenOfGrindModTransformer" };
+        return null;
     }
 
     @Override

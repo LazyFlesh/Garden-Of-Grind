@@ -1,9 +1,6 @@
 package com.LazyFlesh.GardenOfGrindMod;
 
-import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadEasyGoG;
 import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadGoG;
-import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadQuestlessGoG;
-import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadSkyblock;
 import com.gtnewhorizon.gtnhlib.config.ConfigurationManager;
 
 import betterquesting.api.storage.BQ_Settings;
@@ -23,9 +20,11 @@ public class CommonProxy {
         GardenOfGrindMod.LOG.info("I am the Garden of Grind addon mod at version " + Tags.VERSION);
 
         switch (GeneralConfig.challengeMode) {
-            case 1 -> new LoadEasyGoG();
-            case 2 -> new LoadSkyblock();
-            case 3 -> new LoadQuestlessGoG();
+            /*
+             * case 1 -> new LoadEasyGoG();
+             * case 2 -> new LoadSkyblock();
+             * case 3 -> new LoadQuestlessGoG();
+             */ // not yet implemented
             default -> new LoadGoG();
         }
 

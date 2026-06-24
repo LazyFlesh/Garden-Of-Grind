@@ -7,12 +7,13 @@ public class GeneralConfig {
 
     @Config.Reloadable("runtime")
     @Config.Comment("""
-        The mode for the Garden of Grind addon's configuration. 0 (or any undefined int) for Garden of Grind (no changes except for qb and guideNH pages),\s
+        The mode for the Garden of Grind addon's configuration. \s
+        0 (or any undefined int) for Garden of Grind (no changes except for qb and guideNH pages),\s
         1 for Skyblock (several changes to recipes to make it closer to a skyblock version of GTNH),\s
         2 for Gog easy (lightens several of the worst grinds, like green sapphire or tengam),\s
         and 3 for Questless Gog (disables quest rewards. Makes minimal changes if a version of GTNH after 2.9 made it incompletable).""")
     @Config.DefaultInt(0)
-    @Config.RangeInt(min = 0, max = 4)
+    @Config.RangeInt(min = 0, max = 3)
     public static int challengeMode;
 
     @Config.RequiresMcRestart
