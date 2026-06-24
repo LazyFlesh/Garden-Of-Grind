@@ -5,7 +5,6 @@ import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadGoG;
 import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadQuestlessGoG;
 import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadSkyblock;
 import com.gtnewhorizon.gtnhlib.config.ConfigurationManager;
-import com.mitchej123.hodgepodge.config.TweaksConfig;
 
 import betterquesting.api.storage.BQ_Settings;
 import cpw.mods.fml.common.event.FMLInitializationEvent;

@@ -1,6 +1,11 @@
 package com.LazyFlesh.GardenOfGrindMod.mixin;
 
+import java.util.List;
+import java.util.Set;
+
 import javax.annotation.Nonnull;
+
+import org.jetbrains.annotations.NotNull;
 
 import com.LazyFlesh.GardenOfGrindMod.GeneralConfig;
 import com.gtnewhorizon.gtnhmixins.ILateMixinLoader;
@@ -12,11 +17,6 @@ import com.gtnewhorizon.gtnhmixins.builders.MixinBuilder;
 import com.gtnewhorizon.gtnhmixins.builders.TargetModBuilder;
 
 import cpw.mods.fml.common.versioning.ComparableVersion;
-import org.jetbrains.annotations.NotNull;
-
-import java.util.List;
-import java.util.Set;
-
 
 public enum Mixins implements IMixins {
 
@@ -70,7 +70,9 @@ public enum Mixins implements IMixins {
         }
 
         TargetedMod(String coreModClass, String modId, String targetClass) {
-            this.builder = new TargetModBuilder().setCoreModClass(coreModClass).setModId(modId).setTargetClass(targetClass);
+            this.builder = new TargetModBuilder().setCoreModClass(coreModClass)
+                .setModId(modId)
+                .setTargetClass(targetClass);
         }
 
         @Nonnull
