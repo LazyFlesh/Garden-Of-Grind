@@ -1,6 +1,7 @@
 package com.LazyFlesh.GardenOfGrindMod;
 
 import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadGoG;
+import com.LazyFlesh.GardenOfGrindMod.commands.GardenOfGrindCommands;
 import com.gtnewhorizon.gtnhlib.config.ConfigurationManager;
 import com.hfstudio.bqapi.BQApiMod;
 
@@ -48,6 +49,6 @@ public class CommonProxy {
     // register server commands in this event handler (Remove if not needed)
     public void serverStarting(FMLServerStartingEvent event) {
         // not yet implemented
-        // event.registerServerCommand(new GardenOfGrindCommands());
+        event.registerServerCommand(new GardenOfGrindCommands());
     }
 }
