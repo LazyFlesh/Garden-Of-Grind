@@ -2,8 +2,9 @@ package com.LazyFlesh.GardenOfGrindMod;
 
 import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadGoG;
 import com.gtnewhorizon.gtnhlib.config.ConfigurationManager;
+import com.hfstudio.bqapi.BQApiMod;
 
-import betterquesting.api.storage.BQ_Settings;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -12,12 +13,17 @@ import gregtech.common.config.Worldgen;
 
 public class CommonProxy {
 
+    public static boolean bqApi;
+
     // preInit "Run before anything else. Read your config, create blocks, items, etc, and register them with the
     // GameRegistry." (Remove if not needed)
     public void preInit(FMLPreInitializationEvent event) {
         ConfigurationManager.reloadConfig(GeneralConfig.class, "runtime");
 
+        bqApi = Loader.isModLoaded(BQApiMod.MODID);
+
         GardenOfGrindMod.LOG.info("I am the Garden of Grind addon mod at version " + Tags.VERSION);
+        if (!bqApi) GardenOfGrindMod.LOG.warn("BQApi not found. Skipping adding quests!");
 
         switch (GeneralConfig.challengeMode) {
             /*
@@ -34,16 +40,14 @@ public class CommonProxy {
     }
 
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)
-    public void init(FMLInitializationEvent event) {
-        if (GeneralConfig.challengeMode == 3) {
-            // disable rewards for questless gog
-            BQ_Settings.noRewards = true;
-        }
-    }
+    public void init(FMLInitializationEvent event) {}
 
     // postInit "Handle interaction with other mods, complete your setup based on this." (Remove if not needed)
     public void postInit(FMLPostInitializationEvent event) {}
 
     // register server commands in this event handler (Remove if not needed)
-    public void serverStarting(FMLServerStartingEvent event) {}
+    public void serverStarting(FMLServerStartingEvent event) {
+        // not yet implemented
+        // event.registerServerCommand(new GardenOfGrindCommands());
+    }
 }

@@ -2,7 +2,7 @@ package com.LazyFlesh.GardenOfGrindMod;
 
 import com.gtnewhorizon.gtnhlib.config.Config;
 
-@Config(modid = "GardenOfGrindMod")
+@Config(modid = GardenOfGrindMod.MODID)
 public class GeneralConfig {
 
     @Config.Reloadable("runtime")

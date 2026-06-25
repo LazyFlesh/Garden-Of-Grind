@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import com.LazyFlesh.GardenOfGrindMod.CommonProxy;
+import com.LazyFlesh.GardenOfGrindMod.GeneralConfig;
 import com.hfstudio.bqapi.BQApi;
 import com.hfstudio.bqapi.api.builder.Chapters;
 import com.hfstudio.bqapi.api.definition.ChapterDefinition;
@@ -22,9 +24,11 @@ public class ModeLoader {
     public static boolean registered;
 
     public void loadQuestlines() {
-        // load questline, above getting started
-        initChapters();
-        register();
+        if (CommonProxy.bqApi) {
+            // load questline, above getting started
+            initChapters();
+            register();
+        }
     }
 
     public ModeLoader() {}
@@ -47,6 +51,25 @@ public class ModeLoader {
                 .uuidFromResource()
                 .orderAfter(STONE_AGE_UUID)
                 .build());
+    }
+
+    public static String getMode() {
+        switch (GeneralConfig.challengeMode) {
+            case 0 -> {
+                return "Garden of Grind";
+            }
+            case 1 -> {
+                return "Skyblock";
+            }
+            case 2 -> {
+                return "Garden of Grindless";
+            }
+            case 3 -> {
+                return "Questless Garden of Grind";
+            }
+
+        }
+        return "Garden of Grind";
     }
 
 }

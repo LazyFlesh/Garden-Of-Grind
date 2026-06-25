@@ -1,5 +1,10 @@
 package com.LazyFlesh.GardenOfGrindMod;
 
+import java.io.File;
+import java.nio.file.Path;
+
+import net.minecraft.launchwrapper.Launch;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -29,6 +34,12 @@ public class GardenOfGrindMod {
         serverSide = "com.LazyFlesh.GardenOfGrindMod.CommonProxy")
     public static CommonProxy proxy;
 
+    public static Path gogConfigFilepath;
+
+    private static File minecraftHome() {
+        return Launch.minecraftHome != null ? Launch.minecraftHome : new File(".");
+    }
+
     static {
         try {
             ConfigurationManager.registerConfig(GeneralConfig.class);
@@ -48,6 +59,9 @@ public class GardenOfGrindMod {
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)
     public void init(FMLInitializationEvent event) {
         proxy.init(event);
+
+        gogConfigFilepath = minecraftHome().toPath()
+            .resolve("config/GardenOfGrind.cfg");
     }
 
     @Mod.EventHandler

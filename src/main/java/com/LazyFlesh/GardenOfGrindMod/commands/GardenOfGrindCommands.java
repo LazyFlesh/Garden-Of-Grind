@@ -1,19 +1,25 @@
 package com.LazyFlesh.GardenOfGrindMod.commands;
 
-import net.minecraft.command.CommandBase;
-import net.minecraft.command.ICommandSender;
-import net.minecraft.command.WrongUsageException;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.ChatComponentTranslation;
-
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
 
+import net.minecraft.command.CommandBase;
+import net.minecraft.command.ICommandSender;
+import net.minecraft.util.ChatComponentText;
+
+import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.ModeLoader;
+import com.LazyFlesh.GardenOfGrindMod.GardenOfGrindMod;
+import com.LazyFlesh.GardenOfGrindMod.GeneralConfig;
+import com.gtnewhorizon.gtnhlib.config.ConfigurationManager;
+
 public class GardenOfGrindCommands extends CommandBase {
+
+    public GardenOfGrindCommands() {
+
+    }
 
     @Override
     public String getCommandName() {
@@ -42,16 +48,54 @@ public class GardenOfGrindCommands extends CommandBase {
             return;
         }
         String subCommand = args[0].toLowerCase();
+        if (!sender.canCommandSenderUseCommand(getRequiredPermissionLevel(), getCommandName())) return;
 
         switch (subCommand) {
-            case "add": {
-                if (sender.canCommandSenderUseCommand()) {
-                    sender.addChatMessage(new ChatComponentTranslation("commands.error.perm"));
-                    break;
+            case "mode": {
+                if (args.length == 1) {
+                    sender.addChatMessage(new ChatComponentText(ModeLoader.getMode()));
+                    return;
+                } else if (args.length > 1) {
+                    String arg2 = args[1].toLowerCase();
+                    switch (arg2) {
+                        case "gardenofgrind", "0" -> {
+                            GeneralConfig.challengeMode = 0;
+                        }
+                        case "gardenofgrindless", "3" -> {
+                            GeneralConfig.challengeMode = 3;
+                        }
+                        case "skyblock", "2" -> {
+                            GeneralConfig.challengeMode = 2;
+                        }
+                        case "questlessgardenofgrind", "1" -> {
+                            GeneralConfig.challengeMode = 1;
+                        }
+                        default -> {
+                            sender.addChatMessage(
+                                new ChatComponentText("/gog mode <0~3> - Set Garden Of Grind mode to <mode>"));
+                        }
+                    }
                 }
-
-                if (args.length != 3) {
-                    throw new WrongUsageException("/energy_network add <username> <EU>");
+            }
+            case "dragonfight": {
+                if (args.length == 1) {
+                    sender.addChatMessage(new ChatComponentText(GeneralConfig.chaosDragonTime ? "True" : "False"));
+                    return;
+                } else if (args.length > 1) {
+                    String arg2 = args[1].toLowerCase();
+                    switch (arg2) {
+                        case ("true") -> {
+                            GeneralConfig.chaosDragonTime = true;
+                        }
+                        case ("false") -> {
+                            GeneralConfig.chaosDragonTime = false;
+                        }
+                        default -> {
+                            sender.addChatMessage(
+                                new ChatComponentText(
+                                    "/gog dragontime <true/false> - Turns modded chunk population off/on so chaos island can spawn. Requires server restart."));
+                        }
+                    }
                 }
             }
         }
@@ -82,15 +126,24 @@ public class GardenOfGrindCommands extends CommandBase {
         return completions;
     }
 
-    private void printHelpFull (ICommandSender sender) {
+    private void printHelpFull(ICommandSender sender) {
         sender.addChatMessage(new ChatComponentText("Usage: /gog <subcommand> [args...]"));
         sender.addChatMessage(new ChatComponentText(" Subcommands:"));
         sender.addChatMessage(
-            new ChatComponentText(
-                "  mode <mode> - Set Garden Of Grind mode to <mode> (requires permission level 2)"));
+            new ChatComponentText("  mode <mode> - Set Garden Of Grind mode to <mode> (requires permission level 2)"));
         sender.addChatMessage(
             new ChatComponentText(
                 "  dragontime <true/false> - Turns modded chunk population on/off. Requires server restart. (requires permission level 2)"));
     }
-}
 
+    private void writeConfig(String config, int newInt) {
+
+        ConfigurationManager.save(GeneralConfig.class);
+    }
+
+    private void writeConfig(String config, boolean newBool) {
+        Path filepath = GardenOfGrindMod.gogConfigFilepath;
+        ConfigurationManager.save(GeneralConfig.class);
+    }
+
+}
