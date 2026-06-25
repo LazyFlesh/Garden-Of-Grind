@@ -1,5 +1,7 @@
 package com.LazyFlesh.GardenOfGrindMod.commands;
 
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -73,11 +75,13 @@ public class GardenOfGrindCommands extends CommandBase {
                         default -> {
                             sender.addChatMessage(
                                 new ChatComponentText("/gog mode <0~3> - Set Garden Of Grind mode to <mode>"));
+                            return;
                         }
                     }
+                    writeConfig(GeneralConfig.challengeMode);
                 }
             }
-            case "dragonfight": {
+            case "dragontime": {
                 if (args.length == 1) {
                     sender.addChatMessage(new ChatComponentText(GeneralConfig.chaosDragonTime ? "True" : "False"));
                     return;
@@ -86,6 +90,7 @@ public class GardenOfGrindCommands extends CommandBase {
                     switch (arg2) {
                         case ("true") -> {
                             GeneralConfig.chaosDragonTime = true;
+
                         }
                         case ("false") -> {
                             GeneralConfig.chaosDragonTime = false;
@@ -94,8 +99,10 @@ public class GardenOfGrindCommands extends CommandBase {
                             sender.addChatMessage(
                                 new ChatComponentText(
                                     "/gog dragontime <true/false> - Turns modded chunk population off/on so chaos island can spawn. Requires server restart."));
+                            return;
                         }
                     }
+                    writeConfig(GeneralConfig.chaosDragonTime);
                 }
             }
         }
@@ -130,20 +137,39 @@ public class GardenOfGrindCommands extends CommandBase {
         sender.addChatMessage(new ChatComponentText("Usage: /gog <subcommand> [args...]"));
         sender.addChatMessage(new ChatComponentText(" Subcommands:"));
         sender.addChatMessage(
-            new ChatComponentText("  mode <mode> - Set Garden Of Grind mode to <mode> (requires permission level 2)"));
+            new ChatComponentText(
+                "  mode <mode> - Set Garden Of Grind mode to <mode, 0~3> (requires permission level 2)"));
         sender.addChatMessage(
             new ChatComponentText(
-                "  dragontime <true/false> - Turns modded chunk population on/off. Requires server restart. (requires permission level 2)"));
+                "  dragontime <true/false> - Turns modded chunk population off/on. Requires server restart. (requires permission level 2)"));
     }
 
-    private void writeConfig(String config, int newInt) {
-
+    private void writeConfig(int newInt) {
+        replaceLines("    I:challengeMode=", Integer.toString(newInt), GardenOfGrindMod.gogConfigFilepath);
         ConfigurationManager.save(GeneralConfig.class);
     }
 
-    private void writeConfig(String config, boolean newBool) {
-        Path filepath = GardenOfGrindMod.gogConfigFilepath;
+    private void writeConfig(boolean newBool) {
+        replaceLines("    B:chaosDragonTime=", Boolean.toString(newBool), GardenOfGrindMod.gogConfigFilepath);
         ConfigurationManager.save(GeneralConfig.class);
     }
 
+    public static void replaceLines(String toReplace, String replacement, Path path) {
+        try {
+            List<String> fileContent = new ArrayList<>(Files.readAllLines(path, StandardCharsets.UTF_8));
+
+            for (int i = 0; i < fileContent.size(); i++) {
+                if (fileContent.get(i)
+                    .startsWith(toReplace)) {
+                    fileContent.set(i, toReplace + replacement);
+                    break;
+                }
+            }
+
+            Files.write(path, fileContent, StandardCharsets.UTF_8);
+
+        } catch (Exception e) {
+            GardenOfGrindMod.LOG.error("Problem modifying GardenOfGrind.cfg. Returning to default values.");
+        }
+    }
 }
