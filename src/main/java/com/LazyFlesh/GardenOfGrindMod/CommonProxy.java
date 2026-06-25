@@ -1,6 +1,7 @@
 package com.LazyFlesh.GardenOfGrindMod;
 
 import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadGoG;
+import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadQuestlessGoG;
 import com.LazyFlesh.GardenOfGrindMod.commands.GardenOfGrindCommands;
 import com.gtnewhorizon.gtnhlib.config.ConfigurationManager;
 import com.hfstudio.bqapi.BQApiMod;
@@ -30,8 +31,9 @@ public class CommonProxy {
             /*
              * case 1 -> new LoadEasyGoG();
              * case 2 -> new LoadSkyblock();
-             * case 3 -> new LoadQuestlessGoG();
              */ // not yet implemented
+            case 3 -> new LoadQuestlessGoG();
+
             default -> new LoadGoG();
         }
 

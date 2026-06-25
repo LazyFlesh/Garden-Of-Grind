@@ -1,8 +1,5 @@
 package com.LazyFlesh.GardenOfGrindMod.commands;
 
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -13,7 +10,6 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ChatComponentText;
 
 import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.ModeLoader;
-import com.LazyFlesh.GardenOfGrindMod.GardenOfGrindMod;
 import com.LazyFlesh.GardenOfGrindMod.GeneralConfig;
 import com.gtnewhorizon.gtnhlib.config.ConfigurationManager;
 
@@ -78,10 +74,8 @@ public class GardenOfGrindCommands extends CommandBase {
                             return;
                         }
                     }
-                    replaceLines(
-                        "    I:challengeMode=",
-                        Integer.toString(GeneralConfig.challengeMode),
-                        GardenOfGrindMod.gogConfigFilepath);
+                    ConfigurationManager.save(GeneralConfig.class);
+                    sender.addChatMessage(new ChatComponentText("Requires server restart to take effect."));
                 }
             }
             case "dragontime": {
@@ -105,10 +99,9 @@ public class GardenOfGrindCommands extends CommandBase {
                             return;
                         }
                     }
-                    replaceLines(
-                        "    B:chaosDragonTime=",
-                        Boolean.toString(GeneralConfig.chaosDragonTime),
-                        GardenOfGrindMod.gogConfigFilepath);
+                    ConfigurationManager.save(GeneralConfig.class);
+                    sender.addChatMessage(new ChatComponentText("Requires server restart to take effect."));
+
                 }
             }
         }
@@ -148,26 +141,5 @@ public class GardenOfGrindCommands extends CommandBase {
         sender.addChatMessage(
             new ChatComponentText(
                 "  dragontime <true/false> - Turns modded chunk population off/on. Requires server restart. (requires permission level 2)"));
-    }
-
-    public static void replaceLines(String toReplace, String replacement, Path path) {
-        try {
-            List<String> fileContent = new ArrayList<>(Files.readAllLines(path, StandardCharsets.UTF_8));
-
-            for (int i = 0; i < fileContent.size(); i++) {
-                if (fileContent.get(i)
-                    .startsWith(toReplace)) {
-                    fileContent.set(i, toReplace + replacement);
-                    break;
-                }
-            }
-
-            Files.write(path, fileContent, StandardCharsets.UTF_8);
-            ConfigurationManager.save(GeneralConfig.class);
-
-        } catch (Exception e) {
-            GardenOfGrindMod.LOG.warn(
-                "Problem modifying GardenOfGrind.cfg. It probably still worked well enough. It did during testing, at least.");
-        }
     }
 }
