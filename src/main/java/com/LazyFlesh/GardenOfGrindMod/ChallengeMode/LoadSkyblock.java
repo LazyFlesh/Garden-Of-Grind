@@ -46,6 +46,17 @@ public class LoadSkyblock extends ModeLoader {
 
         GameRegistry.addRecipe(
             new ShapedUniversalRecipe(
+                GoGItemList.SiltDust.get(1),
+                "a  ",
+                "b  ",
+                "   ",
+                'a',
+                "craftingToolMortar",
+                'b',
+                new ItemStack(Item.getItemFromBlock(Blocks.sand), 1)));
+
+        GameRegistry.addRecipe(
+            new ShapedUniversalRecipe(
                 GoGItemList.ThermiteBucket.get(1),
                 "abc",
                 "abc",

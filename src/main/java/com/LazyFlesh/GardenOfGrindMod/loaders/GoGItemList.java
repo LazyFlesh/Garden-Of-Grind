@@ -5,6 +5,7 @@ import net.minecraft.item.ItemStack;
 
 import com.LazyFlesh.GardenOfGrindMod.GardenOfGrindMod;
 import com.LazyFlesh.GardenOfGrindMod.loaders.items.GravelDust;
+import com.LazyFlesh.GardenOfGrindMod.loaders.items.Silt;
 import com.LazyFlesh.GardenOfGrindMod.loaders.items.ThermiteBucket;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -13,6 +14,7 @@ public enum GoGItemList {
 
     ThermiteBucket("ThermiteBucket", new ThermiteBucket()),
     GravelDust("GravelDust", new GravelDust()),
+    SiltDust("SiltDust", new Silt())
 
     // because it's a pattern to use a comma, and breaking a pattern sucks
     ;
