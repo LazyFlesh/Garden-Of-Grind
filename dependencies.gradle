@@ -42,6 +42,6 @@ dependencies {
 
     devOnlyNonPublishable("com.github.GTNewHorizons:BetterQuesting:3.8.72-GTNH:dev") { transitive = false}
     devOnlyNonPublishable("com.github.ABKQPO:BetterQuestingAPI:1.1.0:dev") { transitive = false}
-    devOnlyNonPublishable("com.github.GTNewHorizons:BloodMagic:1.9.4:dev") { transitive = false}
+    devOnlyNonPublishable("com.github.GTNewHorizons:BloodMagic:1.9.0:dev") { transitive = false}
 
 }

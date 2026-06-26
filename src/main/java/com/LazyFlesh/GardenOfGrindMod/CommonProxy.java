@@ -5,6 +5,7 @@ import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadGoG;
 import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadQuestlessGoG;
 import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadSkyblock;
 import com.LazyFlesh.GardenOfGrindMod.commands.GardenOfGrindCommands;
+import com.LazyFlesh.GardenOfGrindMod.loaders.GoGItemList;
 import com.LazyFlesh.GardenOfGrindMod.loaders.meteors.meteors;
 import com.hfstudio.bqapi.BQApiMod;
 
@@ -32,6 +33,8 @@ public class CommonProxy {
         GardenOfGrindMod.LOG.info("I am the Garden of Grind addon mod at version " + Tags.VERSION);
         if (!bqApi) GardenOfGrindMod.LOG.warn("BQApi not found. Skipping adding quests!");
 
+        GoGItemList.registerAll();
+
         switch (GeneralConfig.challengeMode) {
             case 1 -> new LoadSkyblock();
             case 2 -> new LoadEasyGoG();
@@ -50,19 +53,14 @@ public class CommonProxy {
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)
     public void init(FMLInitializationEvent event) {
         switch (GeneralConfig.challengeMode) {
-            case 1 -> {
-                LoadSkyblock.registerRecipes();
-                if (bloodMagic) meteors.overrideConfig();
-            }
-            case 2 -> {
-                LoadEasyGoG.registerRecipes();
-                if (bloodMagic) meteors.overrideConfig();
-            }
+            case 1 -> LoadSkyblock.registerRecipes();
+            case 2 -> LoadEasyGoG.registerRecipes();
             case 3 -> LoadQuestlessGoG.registerRecipes();
 
             default -> LoadGoG.registerRecipes();
         }
-
+        // if bm is loaded, override the meteors to ChallengeMode default (unless disabled)
+        if (bloodMagic && !GeneralConfig.disableOverwrite) meteors.overrideConfig();
     }
 
     // postInit "Handle interaction with other mods, complete your setup based on this." (Remove if not needed)

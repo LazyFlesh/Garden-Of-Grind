@@ -24,4 +24,8 @@ public class GeneralConfig {
     @Config.DefaultBoolean(false)
     public static boolean disableGOG;
 
+    @Config.Comment("Disable file overwrites, such as for blood magic meteors.")
+    @Config.DefaultBoolean(false)
+    public static boolean disableOverwrite;
+
 }
