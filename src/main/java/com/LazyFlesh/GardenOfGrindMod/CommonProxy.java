@@ -12,6 +12,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import gregtech.GTMod;
 import gregtech.common.config.Worldgen;
 
 public class CommonProxy {
@@ -38,6 +39,8 @@ public class CommonProxy {
         // disable config things for gog
         // the hodgepodge mixins have been portede here, because early mixins are hard to toggle config on.
         Worldgen.endAsteroids.generateEndAsteroids = false;
+        // disable entity cramming (makes mob farms behave better)
+        GTMod.proxy.mMaxEqualEntitiesAtOneSpot = -1;
     }
 
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)
