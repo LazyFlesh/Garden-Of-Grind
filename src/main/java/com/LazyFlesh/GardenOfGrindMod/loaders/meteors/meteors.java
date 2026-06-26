@@ -37,7 +37,6 @@ public class meteors {
                                 if (fileContent.get(i)
                                     .startsWith("    \"gregtech:gt.blockores2:817:")) {
                                     fileContent.set(i, saltOre[GeneralConfig.challengeMode]);
-                                    break;
                                 } else if (fileContent.get(i)
                                     .startsWith("    \"OREDICT:oreTengamRaw:")) {
                                         fileContent.set(i, tengamOre[GeneralConfig.challengeMode]);

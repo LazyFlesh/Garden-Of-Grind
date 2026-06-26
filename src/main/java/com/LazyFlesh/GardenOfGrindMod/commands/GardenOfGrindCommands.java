@@ -45,7 +45,7 @@ public class GardenOfGrindCommands extends CommandBase {
         if (!sender.canCommandSenderUseCommand(getRequiredPermissionLevel(), getCommandName())) return;
 
         switch (subCommand) {
-            case "mode": {
+            case "mode" -> {
                 if (args.length == 1) {
                     sender.addChatMessage(new ChatComponentText(ModeLoader.getMode()));
                     return;
@@ -74,7 +74,7 @@ public class GardenOfGrindCommands extends CommandBase {
                     sender.addChatMessage(new ChatComponentText("Requires server restart to take effect."));
                 }
             }
-            case "dragontime": {
+            case "dragontime" -> {
                 if (args.length == 1) {
                     sender.addChatMessage(new ChatComponentText(GeneralConfig.chaosDragonTime ? "True" : "False"));
                     return;
