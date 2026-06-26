@@ -5,6 +5,7 @@ import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadGoG;
 import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadQuestlessGoG;
 import com.LazyFlesh.GardenOfGrindMod.ChallengeMode.LoadSkyblock;
 import com.LazyFlesh.GardenOfGrindMod.commands.GardenOfGrindCommands;
+import com.LazyFlesh.GardenOfGrindMod.loaders.meteors.meteors;
 import com.hfstudio.bqapi.BQApiMod;
 
 import cpw.mods.fml.common.Loader;
@@ -18,12 +19,14 @@ import gregtech.common.config.Worldgen;
 public class CommonProxy {
 
     public static boolean bqApi;
+    public static boolean bloodMagic;
 
     // preInit "Run before anything else. Read your config, create blocks, items, etc, and register them with the
     // GameRegistry." (Remove if not needed)
     public void preInit(FMLPreInitializationEvent event) {
 
         bqApi = Loader.isModLoaded(BQApiMod.MODID);
+        bloodMagic = Loader.isModLoaded("AWWayofTime");
 
         GardenOfGrindMod.LOG.info("I am the Garden of Grind addon mod at version " + Tags.VERSION);
         if (!bqApi) GardenOfGrindMod.LOG.warn("BQApi not found. Skipping adding quests!");
@@ -52,6 +55,7 @@ public class CommonProxy {
 
             default -> LoadGoG.registerRecipes();
         }
+        if (bloodMagic) meteors.overrideConfig();
     }
 
     // postInit "Handle interaction with other mods, complete your setup based on this." (Remove if not needed)
