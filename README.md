@@ -27,13 +27,18 @@ Has several recipe and mechanic changes, such as tossing gravel dust in water (l
 
 Combine the items, give it a spark (toss it in fire), and you better pick up the resulting bucket fast, or it might melt, too!
 
-A source of an early sapling and an easy dirt recipe is pending, so just cheat them in for now.
+For early water, there is the watery mass, which cna be made with plant matter, which early crops will help with. For your first lava, you can make a *flowing* lava block by tossing a volatile mass in fire. It's good enough for lava casting for cobblestone! Combine with flint hammer for gravel. 
+
+Crop sticks have an early recipe of 4 arrows or 4 bones to 1, so you can start crops in dirt age, and get bonsais then. It took me about half an hour for a bonsai to pop up.
+Warning: Don't breed brown and red mushrooms to minimise outside pools, as they have a deterministic recipe together, and nothing will breed ever. Grow bown mushrooms at night, and breed during the day so the 1 in 3 chance for a brown mushroom fails every time (they need light level 9)
 
 ### Garden of Grindless
 
-Has a few of the changes made for Skyblock, such as gravel dust for metals, the most basic centrifuging recipes, and a skystone rock breaker recipe.
+Has a few of the changes made for Skyblock, such as gravel dust for early metals, the most basic centrifuging recipes, xp crafting in assembler, and a skystone rock breaker recipe.
 
-The outputs of the tengam and debris meteor have been buffed and the thermite bucket to lava recipe is present, overall lessening the grind. Might be a bit too much, will see.
+The outputs of the tengam and debris meteor have been buffed, and the thermite bucket to lava recipe is present, overall lessening the grind. Might be a bit too much, will see.
+
+Grinds left in: Scrap, bees (for barC for xenoxene)
 
 ### Questless Garden of Grind
 
