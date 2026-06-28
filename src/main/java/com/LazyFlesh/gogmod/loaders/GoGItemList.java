@@ -18,7 +18,7 @@ public enum GoGItemList {
     GravelDust("GravelDust", new GravelDust()),
     SiltDust("SiltDust", new Silt()),
     VolatileMass("VolatileMass", new VolatileMass()),
-    WateryMass("WaterMass", new WateryMass()),
+    WateryMass("WateryMass", new WateryMass()),
 
     // because it's a pattern to use a comma, and breaking a pattern sucks
     ;
@@ -37,7 +37,7 @@ public enum GoGItemList {
         this.item = item;
 
         item.setUnlocalizedName(name);
-        item.setTextureName(GardenOfGrindMod.MODID + ":item" + name);
+        item.setTextureName(GardenOfGrindMod.MODID + ":" + name);
     }
 
     public ItemStack get() {
