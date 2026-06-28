@@ -3,6 +3,7 @@ package com.LazyFlesh.gogmod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.LazyFlesh.GardenOfGrindMod.Tags;
 import com.gtnewhorizon.gtnhlib.config.ConfigException;
 import com.gtnewhorizon.gtnhlib.config.ConfigurationManager;
 

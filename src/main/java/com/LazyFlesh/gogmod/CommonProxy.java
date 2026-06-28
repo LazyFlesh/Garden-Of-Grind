@@ -1,5 +1,6 @@
 package com.LazyFlesh.gogmod;
 
+import com.LazyFlesh.GardenOfGrindMod.Tags;
 import com.LazyFlesh.gogmod.ChallengeMode.LoadEasyGoG;
 import com.LazyFlesh.gogmod.ChallengeMode.LoadGoG;
 import com.LazyFlesh.gogmod.ChallengeMode.LoadQuestlessGoG;
