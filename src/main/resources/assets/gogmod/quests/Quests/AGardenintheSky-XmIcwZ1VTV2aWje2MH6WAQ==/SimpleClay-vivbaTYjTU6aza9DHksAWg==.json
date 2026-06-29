@@ -21,7 +21,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Grind some sand with mortar to make Silt.\nThen toss it into §1§bwater§r§r to get §7Clay§r early!\n\nP.S. just for the case, cauldron works too.",
+      "desc:8": "Smash sand with hammer to convert it into Silt.\nThen toss it into §1§bwater§r§r to get §7Clay Dust§r early!\n\nP.S. just for the case, cauldron works too.",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -60,7 +60,21 @@
   },
   "questIDHigh:4": -4743456537578353330,
   "questIDLow:4": -7291979518837063590,
-  "rewards:9": {},
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 10,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "minecraft:sand"
+        }
+      }
+    }
+  },
   "tasks:9": {
     "0:10": {
       "autoConsume:1": 0,
