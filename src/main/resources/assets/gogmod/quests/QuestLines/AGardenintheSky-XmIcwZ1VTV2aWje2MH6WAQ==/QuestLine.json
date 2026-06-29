@@ -6,9 +6,9 @@
       "desc:8": "A guide for garden of grind",
       "icon:10": {
         "Count:3": 1,
-        "Damage:2": 0,
+        "Damage:2": 15,
         "OreDict:8": "",
-        "id:8": "minecraft:book"
+        "id:8": "Botania:miniIsland"
       },
       "name:8": "A Garden in the Sky",
       "visibility:8": "NORMAL"
