@@ -138,7 +138,7 @@ public class LoadSkyblock extends ModeLoader {
                     "XX ",
                     'X',
                     Items.flint,
-                    's',
+                    'S',
                     Items.stick));
 
             GameRegistry.addRecipe(
@@ -159,7 +159,7 @@ public class LoadSkyblock extends ModeLoader {
                     "b  ",
                     "   ",
                     'a',
-                    "craftingToolMortar",
+                    "craftingToolHardHammer",
                     'b',
                     new ItemStack(Item.getItemFromBlock(Blocks.sand), 1)));
 
