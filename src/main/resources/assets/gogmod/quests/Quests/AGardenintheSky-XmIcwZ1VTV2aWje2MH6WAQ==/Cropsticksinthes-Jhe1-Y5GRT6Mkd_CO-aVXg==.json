@@ -1,0 +1,126 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 7593354573151879590,
+      "questIDLow:4": -4814119299924671027
+    },
+    "1:10": {
+      "questIDHigh:4": -5515982052237161616,
+      "questIDLow:4": -5086924798876303495
+    },
+    "2:10": {
+      "questIDHigh:4": -4620909222181583381,
+      "questIDLow:4": -8334088848416642860
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "You know, these long, straight things are somewhat reminding you of sticks. Maybe sticking them in the ground will allow them to support crop growth! The arrows even come with a pointy bit to stab with!\n\n[note]Make some cropsticks.[/note]\n\nFor the first crops, you have a few options. Well, more than a few. \n1. §6Mushrooms§r, from plague zombies. (Warning below)\n2. §6Eggplant§r, from eggs, from chickens that spawn on the now-attainable grass\n3. §6Witchery seeds§r, §6cotton§r, §6barley§r, §6wheat§r, §6carrots§r, and §6potatoes§r, if you get a hoe, and hoe the grass. Carrots and potatoes you actually get form zombies, but you can\u0027t plant them without a hoe anyway.\n\n[note]Note: Oak Bonsai has a deterministic mutation recipe in Wheat + Brown Mushrooms.[/note]\n\n[warn]Warning: Don\u0027t breed brown and red mushrooms to minimise outside pools, as they have a deterministic recipe together, and nothing will breed... ever. Mushrooms need a light level of 9 to grow, so if you do mutations during the day to remove the 1/3 spread chance as well, then you won\u0027t even get those. \n\nJust weeds. Using brown mushrroms OR red mushrooms is fine. None of the other crops have such limitations.[/warn]",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "cropsnh:cropSticks"
+      },
+      "isMain:1": 0,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Crop sticks in the sky",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "questLogic:8": "XNOR",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "UNLOCKED"
+    }
+  },
+  "questIDHigh:4": 2744862581344060734,
+  "questIDLow:4": -8317621011454978722,
+  "rewards:9": {
+    "0:10": {
+      "ignoreDisabled:1": 0,
+      "index:3": 0,
+      "rewardID:8": "bq_standard:item",
+      "rewards:9": {
+        "0:10": {
+          "Count:3": 4,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "cropsnh:cropSticks"
+        }
+      }
+    }
+  },
+  "tasks:9": {
+    "0:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 1,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 1,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 16,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "minecraft:bone"
+        },
+        "1:10": {
+          "Count:3": 16,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "minecraft:arrow"
+        }
+      },
+      "taskID:8": "bq_standard:optional_retrieval"
+    },
+    "1:10": {
+      "autoConsume:1": 0,
+      "consume:1": 0,
+      "groupDetect:1": 0,
+      "ignoreNBT:1": 1,
+      "index:3": 2,
+      "partialMatch:1": 1,
+      "requireOnlyOneItem:1": 0,
+      "requiredItems:9": {
+        "0:10": {
+          "Count:3": 4,
+          "Damage:2": 0,
+          "OreDict:8": "",
+          "id:8": "cropsnh:cropSticks"
+        }
+      },
+      "taskID:8": "bq_standard:retrieval"
+    }
+  }
+}
