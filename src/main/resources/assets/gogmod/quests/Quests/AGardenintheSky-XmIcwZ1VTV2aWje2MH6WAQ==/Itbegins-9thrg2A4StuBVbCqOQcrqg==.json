@@ -12,13 +12,13 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Welcome to the §mJungle§r Void!\n\nSo, you\u0027ve decided to get the GoG addon. That\u0027s good. It\u0027s certainly much more up-to-date than the github wiki we have for GoG progress. \n\nBefore we begin, allow me to explain what this addon does:\n\nOn the whole, it\u0027s an information database, adding pages to the questbook and guideNH so you don\u0027t have to leave the game to find out how to get stuff. \n\nSecondly, it has modes!\n\nMuch like how project ozone has normal, titan, and kappa, this addon has Garden of Grind, Skyblock, Garden of Grindless, and Questless Garden of Grind. The more specific changes for each mode can be found in their quests, but overall, except for Garden of Grind, the modes make some amount of changes to the base GTNH recipes, either to make the game more similar to a normal Skyblock, or to lessen the grind for a normal GoG run. Or just disable quest rewards :p\n\n\n§c§nP.s, you can change the mode at any time with /gog mode \u003cmode name\u003e or /gog mode \u003c0~3\u003e",
+      "desc:8": "Welcome to the §mJungle§r Void!\n\nSo, you\u0027ve decided to get the GoG addon. That\u0027s good. It\u0027s certainly much more up-to-date than the github wiki we have for GoG progress. \n\nBefore we begin, allow me to explain what this addon does:\n\nOn the whole, it\u0027s an information database, adding pages to the questbook and guideNH so you don\u0027t have to leave the game to find out how to get stuff. \n\nSecondly, it has modes!\n\nMuch like how project ozone has normal, titan, and kappa, this addon has Garden of Grind, Skyblock, Garden of Grindless, and Questless Garden of Grind. \n\nThe more specific changes for each mode can be found in their quests, but overall, except for Garden of Grind, the modes make some amount of changes to the base GTNH recipes, either to make the game more similar to a normal Skyblock, or to lessen the grind for a normal GoG run. Or just disable quest rewards :p\n\n\n§c§nP.s, you can change the mode at any time with /gog mode \u003cmode name\u003e or /gog mode \u003c0~3\u003e",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
-        "Damage:2": 0,
+        "Damage:2": 3,
         "OreDict:8": "",
-        "id:8": "minecraft:grass"
+        "id:8": "Botania:miniIsland"
       },
       "isMain:1": 0,
       "isSilent:1": 0,

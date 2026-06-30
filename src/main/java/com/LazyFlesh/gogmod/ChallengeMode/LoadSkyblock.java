@@ -142,25 +142,15 @@ public class LoadSkyblock extends ModeLoader {
                     Items.stick));
 
             GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(
+                new ShapelessUniversalRecipe(
                     GoGItemList.GravelDust.get(1),
-                    "a  ",
-                    "b  ",
-                    "   ",
-                    'a',
                     "craftingToolHardHammer",
-                    'b',
                     new ItemStack(Item.getItemFromBlock(Blocks.gravel), 1)));
 
             GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(
+                new ShapelessUniversalRecipe(
                     GoGItemList.SiltDust.get(1),
-                    "a  ",
-                    "b  ",
-                    "   ",
-                    'a',
                     "craftingToolHardHammer",
-                    'b',
                     new ItemStack(Item.getItemFromBlock(Blocks.sand), 1)));
 
             GameRegistry.addRecipe(

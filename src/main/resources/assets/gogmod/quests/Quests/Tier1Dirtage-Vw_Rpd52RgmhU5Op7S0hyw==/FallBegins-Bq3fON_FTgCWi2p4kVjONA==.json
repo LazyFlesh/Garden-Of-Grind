@@ -1,0 +1,73 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 7593354573151879590,
+      "questIDLow:4": -4814119299924671027
+    },
+    "1:10": {
+      "questIDHigh:4": 6446630247553846568,
+      "questIDLow:4": -9050849072832045210
+    },
+    "2:10": {
+      "questIDHigh:4": -5515982052237161616,
+      "questIDLow:4": -5086924798876303495
+    },
+    "3:10": {
+      "questIDHigh:4": 5402757545849999216,
+      "questIDLow:4": -7720519487494052416
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "The immutable foundation of Garden of Grind, unlikely to ever change*: Death.\n\nIt\u0027s an even that begins as soon as you spawn in. You have no choice BUT to fall to your death.\n\n\n\nAnd if you ever find yourself on a block? I mean, you should probably set your home there, but other than that?\n\nKill yourself.\n\n\n\nWe are all prisoners in the circle of life, death, and rebirth, until we can escape this upside down reality back into the normal world by constucting and passing through a stargate. Unfortunately, the longer you take, the more robust the gate has to be, to account for the increasing instability and distance from home.\n\nThis guide contains some of the previous gates, and what they required. I\u0027m sure you can see how much they have increased in cost and material requirements since the first...\n\n\n§7*at least until I can figure out how to make a structure on first world load, that doesn\u0027t get removed by the disableModdedChunkPopulation§r",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "OpenBlocks:grave"
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "Fall Begins",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "questLogic:8": "OR",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 481286170563923456,
+  "questIDLow:4": -7598862880190443980,
+  "rewards:9": {},
+  "tasks:9": {}
+}

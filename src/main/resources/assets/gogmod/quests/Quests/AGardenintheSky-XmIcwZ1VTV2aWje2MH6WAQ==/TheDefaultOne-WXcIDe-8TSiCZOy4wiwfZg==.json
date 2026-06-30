@@ -28,7 +28,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Ah, good old Garden of Grind. \n\nNo recipe changes, no qb reward changes... how quaint. \n\n\n[warn]This will run a one-time command to turn the mode to Garden of Grind. \nYou can run this yourself at any point with /gog mode GardenOfGrind or /gog mode 0[/warn]",
+      "desc:8": "Ah, good old Garden of Grind. \n\nNo recipe changes, no qb reward changes... how quaint. \n\n\n[warn]This will run a one-time command to turn the mode to Garden of Grind. Restart world/server for change to take effect.\n\nYou can run this yourself at any point with /gog mode GardenOfGrind or /gog mode 0[/warn]",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -69,7 +69,7 @@
   "questIDLow:4": -9050849072832045210,
   "rewards:9": {
     "0:10": {
-      "command:8": "/say VAR_NAME Claimed a reward",
+      "command:8": "/gog mode 0",
       "hideCommand:1": 0,
       "ignoreDisabled:1": 1,
       "index:3": 0,

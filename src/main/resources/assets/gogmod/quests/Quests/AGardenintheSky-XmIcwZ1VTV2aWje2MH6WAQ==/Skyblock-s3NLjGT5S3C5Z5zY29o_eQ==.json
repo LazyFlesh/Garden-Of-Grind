@@ -28,7 +28,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Personally, I love Skyblock. I think it has to do with not having to explore the world, or having to pick up and move bases, or mine for hours on end for your resources.\n\nSkyblock mode does just that. It adds new recipes for you to source the basic resources once you have the Steam Separator, starting with centrifuging gravel and sand for things like magnetite, flint, pyrite, chalcopyrite, coal, diamonds, emeralds, etc., then making the \n\n//TODO finish\n\n[warn]This will run a one-time command to turn the mode to Skyblock. \r\nYou can run this yourself at any point with /gog mode Skyblock or /gog mode 1[/warn]",
+      "desc:8": "Personally, I love Skyblock. I think it has to do with not having to explore the world, or having to pick up and move bases, or mine for hours on end for your resources.\n\nSkyblock mode does just that. It adds new recipes for you to source the basic resources once you have the Steam Separator, starting with centrifuging gravel and sand for things like magnetite, tetrahedrite, diamonds, graphite, mica, asbestos, etc., then more deterministic recipes in the Simple Washer, if you need a lot of iron or tin.\n\nBefore then, however, you\u0027ll have to do some good old fashioned manual work, and, after killing some skeletons, start crops, then make a flint hammer, and do some gravel sifting in the water for your first renewable metals. Combine that with some early clay from silt, from sand, and you can get to xp crafting and lava within a few... well, it took me 7 hours, so, good luck!\n\nI recommend exploding a drowning creeper... not in the middle of your base.\n\n[warn]This will run a one-time command to turn the mode to Skyblock. Restart world/server for change to take effect.\n\r\nYou can run this yourself at any point with /gog mode Skyblock or /gog mode 1[/warn]",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -69,7 +69,7 @@
   "questIDLow:4": -5086924798876303495,
   "rewards:9": {
     "0:10": {
-      "command:8": "/say VAR_NAME Claimed a reward",
+      "command:8": "/gog mode 1",
       "hideCommand:1": 0,
       "ignoreDisabled:1": 1,
       "index:3": 0,

@@ -1,0 +1,230 @@
+{
+  "preRequisites:9": {
+    "0:10": {
+      "questIDHigh:4": 7010754582300803594,
+      "questIDLow:4": -8766281049874906709
+    },
+    "1:10": {
+      "questIDHigh:4": -1291781761276361378,
+      "questIDLow:4": -6401813657062876534
+    },
+    "2:10": {
+      "questIDHigh:4": 5143422796793332606,
+      "questIDLow:4": -9059396740406174920
+    },
+    "3:10": {
+      "questIDHigh:4": 7932743550049862664,
+      "questIDLow:4": -8436558627638741247
+    },
+    "4:10": {
+      "questIDHigh:4": 4396244768471926778,
+      "questIDLow:4": -6567080795060722541
+    }
+  },
+  "properties:10": {
+    "betterquesting:10": {
+      "autoClaim:1": 0,
+      "completion_animation:8": "default",
+      "completion_particle:8": "default",
+      "confetti_icon:10": {
+        "Count:3": 0,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "minecraft:stick"
+      },
+      "countAsQuest:1": 1,
+      "desc:8": "I mean, he looks a pit peculiar... \n\nMust be from being resurrected. I\u0027m sure if you get a friend to join you in this void of suffering they\u0027ll be able to speak, write, and whine just fine. \n\nThese guys... well, they do like shiny stuff, at least. Their pockets seem to contain some of their inventory from before they were dead.\n\nWeird they can access it when killing their undead form didn\u0027t drop it... must be a subspace.\n\n\n[note]Farmers and arborists sell saplings.\nLibrarians sell glass.\nBlacksmiths and Armorsmiths can sell iron tools and armour.\nMerchant sells iron, thaumium, woold, and other stuff for coins instead of emeralds.\nWizard sells thaumcraft shards and knowledge fragments.\nHeretic sells the profane wand, skulls, not that you need more of those, and some foci.\nApothecary sells clay.[/note]\n",
+      "globalShare:1": 0,
+      "icon:10": {
+        "Count:3": 1,
+        "Damage:2": 0,
+        "OreDict:8": "",
+        "id:8": "DraconicEvolution:mobSoul",
+        "tag:10": {
+          "Name:8": "Villager"
+        }
+      },
+      "isMain:1": 1,
+      "isSilent:1": 0,
+      "lockedProgress:1": 0,
+      "name:8": "A... Less? Peculiar Merchant",
+      "notification_duration:5": -1.0,
+      "notification_effect:3": -1,
+      "notification_fade_in:5": -1.0,
+      "notification_fade_out:5": -1.0,
+      "notification_icon_offset_y:3": -2147483648,
+      "notification_icon_scale:5": -1.0,
+      "notification_pos_x:3": -2147483648,
+      "notification_pos_y:3": -2147483648,
+      "notification_show_icon:8": "default",
+      "notification_style:8": "default",
+      "notification_subtitle:8": "",
+      "notification_subtitle_scale:5": -1.0,
+      "notification_title:8": "",
+      "notification_title_scale:5": -1.0,
+      "particle_count:3": -1,
+      "questLogic:8": "OR",
+      "repeatTime:3": -1,
+      "repeat_relative:1": 1,
+      "simultaneous:1": 0,
+      "snd_complete:8": "random.levelup",
+      "snd_update:8": "random.levelup",
+      "taskLogic:8": "AND",
+      "visibility:8": "NORMAL"
+    }
+  },
+  "questIDHigh:4": 1186360852266042073,
+  "questIDLow:4": -4731212281019401573,
+  "rewards:9": {},
+  "tasks:9": {
+    "0:10": {
+      "amount:3": 1,
+      "ignoreNBT:1": 1,
+      "index:3": 0,
+      "range:3": 4,
+      "subtypes:1": 1,
+      "target:8": "Villager",
+      "targetNBT:10": {
+        "AbsorptionAmount:5": 0.0,
+        "Age:3": 0,
+        "Air:2": 300,
+        "AttackTime:2": 0,
+        "Attributes:9": {
+          "0:10": {
+            "Base:6": 0.0,
+            "Name:8": "weapon.penetrateArmor"
+          },
+          "1:10": {
+            "Base:6": 3.0,
+            "Name:8": "weapon.daze"
+          },
+          "2:10": {
+            "Base:6": 0.0,
+            "Name:8": "weapon.attackSpeed"
+          },
+          "3:10": {
+            "Base:6": 0.0,
+            "Name:8": "weapon.mountedBonus"
+          },
+          "4:10": {
+            "Base:6": 20.0,
+            "Name:8": "generic.maxHealth"
+          },
+          "5:10": {
+            "Base:6": 0.0,
+            "Name:8": "generic.knockbackResistance"
+          },
+          "6:10": {
+            "Base:6": 0.5,
+            "Name:8": "generic.movementSpeed"
+          },
+          "7:10": {
+            "Base:6": 16.0,
+            "Name:8": "generic.followRange"
+          }
+        },
+        "CanPickUpLoot:1": 0,
+        "CreatureInfusion:10": {
+          "InfusionCosts:10": {
+            "Aspects:9": {}
+          },
+          "Infusions:11": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "PlayerInfusions:11": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "sitting:1": 0,
+          "toggleClimb:1": 0,
+          "toggleInvisible:1": 0,
+          "tumorWarp:3": 0,
+          "tumorWarpPermanent:3": 0,
+          "tumorWarpTemp:3": 0
+        },
+        "CustomName:8": "",
+        "CustomNameVisible:1": 0,
+        "DeathTime:2": 0,
+        "Dimension:3": 0,
+        "DropChances:9": {
+          "0:5": 0.085,
+          "1:5": 0.085,
+          "2:5": 0.085,
+          "3:5": 0.085,
+          "4:5": 0.085
+        },
+        "Equipment:9": {
+          "0:10": {},
+          "1:10": {},
+          "2:10": {},
+          "3:10": {},
+          "4:10": {}
+        },
+        "FallDistance:5": 0.0,
+        "Fire:2": 0,
+        "ForgeData:10": {},
+        "HealF:5": 20.0,
+        "Health:2": 20,
+        "HurtTime:2": 0,
+        "Invulnerable:1": 0,
+        "Leashed:1": 0,
+        "Motion:9": {
+          "0:6": 0.0,
+          "1:6": 0.0,
+          "2:6": 0.0
+        },
+        "OnGround:1": 0,
+        "PersistenceRequired:1": 0,
+        "PortalCooldown:3": 0,
+        "Pos:9": {
+          "0:6": 0.0,
+          "1:6": 0.0,
+          "2:6": 0.0
+        },
+        "Profession:3": 0,
+        "Riches:3": 0,
+        "Rotation:9": {
+          "0:5": 0.56636125,
+          "1:5": 0.0
+        },
+        "UUIDLeast:4": -7575853324282440349,
+        "UUIDMost:4": -7479635858978487330,
+        "VNExtendedVillager:10": {
+          "BiomeType:3": -1,
+          "Career:3": -1,
+          "Defined:1": 0,
+          "ProfessionLevel:3": -1,
+          "SkinTone:3": -99
+        },
+        "WitcheryExtendedVillager:10": {
+          "Blood:3": 500
+        },
+        "archTimeToReset:3": 0,
+        "id:8": "Villager",
+        "oiltweak.inOil:1": 0
+      },
+      "taskID:8": "bq_standard:meeting"
+    }
+  }
+}

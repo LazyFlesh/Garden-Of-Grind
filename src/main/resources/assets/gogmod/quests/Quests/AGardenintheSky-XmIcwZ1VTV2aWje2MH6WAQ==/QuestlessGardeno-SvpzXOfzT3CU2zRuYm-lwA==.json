@@ -28,7 +28,7 @@
         "id:8": "minecraft:stick"
       },
       "countAsQuest:1": 1,
-      "desc:8": "Fun fact! It\u0027s possible with no changes (at least in 2.9)\n\nAs a matter of fact, choose this mode makes no changes to the game other than to disable qb rewards. \n\nShould it not be possible at some point in the future, the minimum possible changes will be made to make it possible again.\n\n\n\n[warn]This will run a one-time command to turn the mode to Questless Garden of Grind. \r\nYou can run this yourself at any point with /gog mode QuestlessGardenOfGrind or /gog mode 3[/warn]",
+      "desc:8": "Fun fact! It\u0027s possible with no changes (at least in 2.9)\n\nAs a matter of fact, choose this mode makes no changes to the game other than to disable qb rewards. \n\nShould it not be possible at some point in the future, the minimum possible changes will be made to make it possible again.\n\n\n\n[warn]This will run a one-time command to turn the mode to Questless Garden of Grind. Restart world/server for change to take effect.\n\r\nYou can run this yourself at any point with /gog mode QuestlessGardenOfGrind or /gog mode 3[/warn]",
       "globalShare:1": 0,
       "icon:10": {
         "Count:3": 1,
@@ -69,7 +69,7 @@
   "questIDLow:4": -7720519487494052416,
   "rewards:9": {
     "0:10": {
-      "command:8": "/say VAR_NAME Claimed a reward",
+      "command:8": "/gog mode 3",
       "hideCommand:1": 0,
       "ignoreDisabled:1": 1,
       "index:3": 0,

@@ -51,6 +51,13 @@ public class ModeLoader {
                 .uuidFromResource()
                 .orderAfter(STONE_AGE_UUID)
                 .build());
+        CHAPTERS.add(
+            Chapters.imported("Tier -1 - Dirt age")
+                .resourceFolder(RESOURCE_MOD_ID, RESOURCE_ROOT)
+                .lineDirectory("Tier1Dirtage-Vw_Rpd52RgmhU5Op7S0hyw==")
+                .uuidFromResource()
+                .orderAfter("AGardenintheSky-XmIcwZ1VTV2aWje2MH6WAQ==")
+                .build());
     }
 
     public static String getMode() {
