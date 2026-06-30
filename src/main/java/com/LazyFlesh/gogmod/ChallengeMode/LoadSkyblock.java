@@ -81,13 +81,8 @@ public class LoadSkyblock extends ModeLoader {
                     NHItemList.MaceratedPlantmass.get(1)));
 
             GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(
-                    NHItemList.MaceratedPlantmass.get(1),
-                    "aaa",
-                    "a a",
-                    "aaa",
-                    'a',
-                    new ItemStack(Item.getItemFromBlock(Blocks.sapling), 1, WILDCARD)));
+                new ShapedUniversalRecipe(GoGItemList.WateryMass.get(1), "aaa", "aaa", "aaa", 'a', "listAllJuice"));
+
             GameRegistry.addRecipe(
                 new ShapedUniversalRecipe(
                     NHItemList.MaceratedPlantmass.get(1),
@@ -95,7 +90,7 @@ public class LoadSkyblock extends ModeLoader {
                     "a a",
                     "aaa",
                     'a',
-                    new ItemStack(Item.getItemFromBlock(Blocks.leaves), 1, WILDCARD)));
+                    "treeSapling"));
             GameRegistry.addRecipe(
                 new ShapedUniversalRecipe(
                     NHItemList.MaceratedPlantmass.get(1),
@@ -103,7 +98,7 @@ public class LoadSkyblock extends ModeLoader {
                     "a a",
                     "aaa",
                     'a',
-                    new ItemStack(Item.getItemFromBlock(Blocks.leaves2), 1, WILDCARD)));
+                    "treeLeaves"));
             GameRegistry.addRecipe(
                 new ShapedUniversalRecipe(
                     NHItemList.MaceratedPlantmass.get(1),
@@ -111,7 +106,7 @@ public class LoadSkyblock extends ModeLoader {
                     "a a",
                     "aaa",
                     'a',
-                    new ItemStack(Items.reeds, 1)));
+                    "listAllVeggie"));
             GameRegistry.addRecipe(
                 new ShapedUniversalRecipe(
                     NHItemList.MaceratedPlantmass.get(1),
@@ -119,7 +114,7 @@ public class LoadSkyblock extends ModeLoader {
                     "a a",
                     "aaa",
                     'a',
-                    new ItemStack(Blocks.brown_mushroom, 1)));
+                    "listAllFruit"));
             GameRegistry.addRecipe(
                 new ShapedUniversalRecipe(
                     NHItemList.MaceratedPlantmass.get(1),
@@ -127,7 +122,9 @@ public class LoadSkyblock extends ModeLoader {
                     "a a",
                     "aaa",
                     'a',
-                    new ItemStack(Blocks.red_mushroom, 1)));
+                    "listAllMushroom"));
+            GameRegistry.addRecipe(
+                new ShapedUniversalRecipe(NHItemList.MaceratedPlantmass.get(1), "aaa", "a a", "aaa", 'a', "sugarcane"));
 
             GameRegistry.addRecipe(
                 new ShapedUniversalRecipe(
@@ -287,6 +284,13 @@ public class LoadSkyblock extends ModeLoader {
                     .circuit(6)
                     .outputItem(getModItem(AppliedEnergistics2.ID, "tile.BlockSkyStone", 1L))
                     .duration(16 * TICKS));
+
+        }
+    }
+
+    public void registerOre() {
+        Object[] ores = new Object[] {};
+        for (int i = 0; i < ores.length; ++i) {
 
         }
     }
