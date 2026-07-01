@@ -36,11 +36,11 @@ public class GravelDust extends Item {
             int tMetaData = aItemEntity.worldObj.getBlockMetadata(tX, tY, tZ);
             if ((tBlock == Blocks.cauldron) && (tMetaData > 0)) {
                 int[] outputs = { 0, 0, 0 };
-                // for each gravel item, roll for magnetite (40%), chalcopyrite (20%), or cassiterite (20%)
+                // for each gravel item, roll for magnetite (40%), chalcopyrite (30%), or cassiterite (20%)
                 for (int i = 1; i <= aItemEntity.getEntityItem().stackSize; i++) {
                     int rand = aItemEntity.worldObj.rand.nextInt(100);
-                    if (rand < 20) continue;
-                    else if (rand < 60) outputs[0]++;
+                    if (rand < 10) continue;
+                    else if (rand < 50) outputs[0]++;
                     else if (rand < 80) outputs[1]++;
                     else outputs[2]++;
                 }
@@ -67,11 +67,11 @@ public class GravelDust extends Item {
                 return true;
             } else if (tBlock == Blocks.water || tBlock == Blocks.flowing_water) {
                 int[] outputs = new int[] { 0, 0, 0 };
-                // for each gravel item, roll for magnetite (20%), chalcopyrite (10%), or cassiterite (10%)
+                // for each gravel item, roll for magnetite (20%), chalcopyrite (15%), or cassiterite (10%)
                 for (int i = 1; i <= aItemEntity.getEntityItem().stackSize; i++) {
                     int rand = aItemEntity.worldObj.rand.nextInt(100);
-                    if (rand < 60) continue;
-                    else if (rand < 80) outputs[0]++;
+                    if (rand < 55) continue;
+                    else if (rand < 75) outputs[0]++;
                     else if (rand < 90) outputs[1]++;
                     else outputs[2]++;
                 }
