@@ -13,12 +13,12 @@ import com.google.gson.JsonSyntaxException;
 public class meteors {
 
     private static final String[] saltOre = new String[] { "    \"gregtech:gt.blockores2:817:72\",",
-        "    \"gregtech:gt.blockores2:817:53\",", "    \"gregtech:gt.blockores2:817:53\",",
+        "    \"gregtech:gt.blockores2:817:65\",", "    \"gregtech:gt.blockores2:817:68\",",
         "    \"gregtech:gt.blockores2:817:72\"," };
     private static final String[] tengamOre = new String[] { "    \"OREDICT:oreTengamRaw:1\"",
-        "    \"OREDICT:oreTengamRaw:20\"", "    \"OREDICT:oreTengamRaw:20\"", "    \"OREDICT:oreTengamRaw:1\"" };
+        "    \"OREDICT:oreTengamRaw:8\"", "    \"OREDICT:oreTengamRaw:5\"", "    \"OREDICT:oreTengamRaw:1\"" };
     private static final String[] debris = new String[] { "    \"etfuturum:ancient_debris:0:2\"",
-        "    \"etfuturum:ancient_debris:0:10\"", "    \"etfuturum:ancient_debris:0:10\"",
+        "    \"etfuturum:ancient_debris:0:5\"", "    \"etfuturum:ancient_debris:0:5\"",
         "    \"etfuturum:ancient_debris:0:2\"" };
 
     public static void overrideConfig() {

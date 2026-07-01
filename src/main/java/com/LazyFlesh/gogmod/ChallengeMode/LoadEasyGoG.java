@@ -21,7 +21,6 @@ import com.dreammaster.main.MainRegistry;
 import com.dreammaster.recipes.ShapedUniversalRecipe;
 import com.dreammaster.recipes.ShapelessUniversalRecipe;
 import com.dreammaster.scripts.IngredientFactory;
-import com.gtnewhorizon.cropsnh.api.CropsNHItemList;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import gregtech.api.enums.GTValues;
@@ -42,22 +41,23 @@ public class LoadEasyGoG extends ModeLoader {
 
     public static void registerRecipes() {
         try {
-            GameRegistry.addRecipe(
-                new ShapelessUniversalRecipe(
-                    CropsNHItemList.cropSticks.get(1),
-                    new ItemStack(Items.bone, 1),
-                    new ItemStack(Items.bone, 1),
-                    new ItemStack(Items.bone, 1),
-                    new ItemStack(Items.bone, 1)));
+            if (Mods.CropsNH.isModLoaded()) {
+                GameRegistry.addRecipe(
+                    new ShapelessUniversalRecipe(
+                        getModItem(Mods.CropsNH.getID(), "cropSticks", 1),
+                        new ItemStack(Items.bone, 1),
+                        new ItemStack(Items.bone, 1),
+                        new ItemStack(Items.bone, 1),
+                        new ItemStack(Items.bone, 1)));
 
-            GameRegistry.addRecipe(
-                new ShapelessUniversalRecipe(
-                    CropsNHItemList.cropSticks.get(1),
-                    new ItemStack(Items.arrow, 1),
-                    new ItemStack(Items.arrow, 1),
-                    new ItemStack(Items.arrow, 1),
-                    new ItemStack(Items.arrow, 1)));
-
+                GameRegistry.addRecipe(
+                    new ShapelessUniversalRecipe(
+                        getModItem(Mods.CropsNH.getID(), "cropSticks", 1),
+                        new ItemStack(Items.arrow, 1),
+                        new ItemStack(Items.arrow, 1),
+                        new ItemStack(Items.arrow, 1),
+                        new ItemStack(Items.arrow, 1)));
+            }
             GameRegistry.addRecipe(
                 new ShapedUniversalRecipe(
                     GoGItemList.ThermiteBucket.get(1),

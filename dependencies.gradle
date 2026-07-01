@@ -40,12 +40,6 @@ dependencies {
     implementation("com.github.GTNewHorizons:GTNHLib:0.11.21:dev")
     implementation("com.github.GTNewHorizons:NewHorizonsCoreMod:2.9.1:dev")
 
-    devOnlyNonPublishable("com.github.GTNewHorizons:CropsNH:2.0.85:dev")
-    // need it for cropsNH for some reason
-    devOnlyNonPublishable("com.github.GTNewHorizons:ForestryMC:4.11.29:dev")
-
     devOnlyNonPublishable("com.github.GTNewHorizons:BetterQuesting:3.8.72-GTNH:dev") { transitive = false}
     devOnlyNonPublishable("com.github.ABKQPO:BetterQuestingAPI:1.1.0:dev") { transitive = false}
-    devOnlyNonPublishable("com.github.GTNewHorizons:BloodMagic:1.9.4:dev") { transitive = false}
-
 }

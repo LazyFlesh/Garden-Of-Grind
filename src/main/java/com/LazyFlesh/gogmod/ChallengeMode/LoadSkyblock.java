@@ -24,7 +24,6 @@ import com.dreammaster.item.NHItemList;
 import com.dreammaster.main.MainRegistry;
 import com.dreammaster.recipes.ShapedUniversalRecipe;
 import com.dreammaster.recipes.ShapelessUniversalRecipe;
-import com.gtnewhorizon.cropsnh.api.CropsNHItemList;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import gregtech.api.enums.GTValues;
@@ -49,22 +48,23 @@ public class LoadSkyblock extends ModeLoader {
         GardenOfGrindMod.LOG.info("Registering recipes for Skyblock");
 
         try {
-            GameRegistry.addRecipe(
-                new ShapelessUniversalRecipe(
-                    CropsNHItemList.cropSticks.get(1),
-                    new ItemStack(Items.bone, 1),
-                    new ItemStack(Items.bone, 1),
-                    new ItemStack(Items.bone, 1),
-                    new ItemStack(Items.bone, 1)));
+            if (Mods.CropsNH.isModLoaded()) {
+                GameRegistry.addRecipe(
+                    new ShapelessUniversalRecipe(
+                        getModItem(Mods.CropsNH.getID(), "cropSticks", 1),
+                        new ItemStack(Items.bone, 1),
+                        new ItemStack(Items.bone, 1),
+                        new ItemStack(Items.bone, 1),
+                        new ItemStack(Items.bone, 1)));
 
-            GameRegistry.addRecipe(
-                new ShapelessUniversalRecipe(
-                    CropsNHItemList.cropSticks.get(1),
-                    new ItemStack(Items.arrow, 1),
-                    new ItemStack(Items.arrow, 1),
-                    new ItemStack(Items.arrow, 1),
-                    new ItemStack(Items.arrow, 1)));
-
+                GameRegistry.addRecipe(
+                    new ShapelessUniversalRecipe(
+                        getModItem(Mods.CropsNH.getID(), "cropSticks", 1),
+                        new ItemStack(Items.arrow, 1),
+                        new ItemStack(Items.arrow, 1),
+                        new ItemStack(Items.arrow, 1),
+                        new ItemStack(Items.arrow, 1)));
+            }
             GameRegistry.addRecipe(
                 new ShapelessUniversalRecipe(
                     GoGItemList.VolatileMass.get(1),
@@ -82,8 +82,8 @@ public class LoadSkyblock extends ModeLoader {
                     'a',
                     NHItemList.MaceratedPlantmass.get(1)));
 
-            GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(GoGItemList.WateryMass.get(1), "aaa", "aaa", "aaa", 'a', "listAllJuice"));
+            if (Mods.PamsHarvestCraft.isModLoaded()) GameRegistry.addRecipe(
+                new ShapedUniversalRecipe(GoGItemList.WateryMass.get(1), "aaa", "aaa", "aaa", 'a', "listAlljuice"));
 
             GameRegistry.addRecipe(
                 new ShapedUniversalRecipe(
@@ -101,30 +101,32 @@ public class LoadSkyblock extends ModeLoader {
                     "aaa",
                     'a',
                     "treeLeaves"));
-            GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(
-                    NHItemList.MaceratedPlantmass.get(1),
-                    "aaa",
-                    "a a",
-                    "aaa",
-                    'a',
-                    "listAllVeggie"));
-            GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(
-                    NHItemList.MaceratedPlantmass.get(1),
-                    "aaa",
-                    "a a",
-                    "aaa",
-                    'a',
-                    "listAllFruit"));
-            GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(
-                    NHItemList.MaceratedPlantmass.get(1),
-                    "aaa",
-                    "a a",
-                    "aaa",
-                    'a',
-                    "listAllMushroom"));
+            if (Mods.PamsHarvestCraft.isModLoaded()) {
+                GameRegistry.addRecipe(
+                    new ShapedUniversalRecipe(
+                        NHItemList.MaceratedPlantmass.get(1),
+                        "aaa",
+                        "a a",
+                        "aaa",
+                        'a',
+                        "listAllveggie"));
+                GameRegistry.addRecipe(
+                    new ShapedUniversalRecipe(
+                        NHItemList.MaceratedPlantmass.get(1),
+                        "aaa",
+                        "a a",
+                        "aaa",
+                        'a',
+                        "listAllfruit"));
+                GameRegistry.addRecipe(
+                    new ShapedUniversalRecipe(
+                        NHItemList.MaceratedPlantmass.get(1),
+                        "aaa",
+                        "a a",
+                        "aaa",
+                        'a',
+                        "listAllmushroom"));
+            }
             GameRegistry.addRecipe(
                 new ShapedUniversalRecipe(NHItemList.MaceratedPlantmass.get(1), "aaa", "a a", "aaa", 'a', "sugarcane"));
 
@@ -143,7 +145,7 @@ public class LoadSkyblock extends ModeLoader {
             GameRegistry.addRecipe(
                 new ShapedUniversalRecipe(
                     GoGItemList.GravelDust.get(1),
-                    "ba ",
+                    "ab ",
                     "   ",
                     "   ",
                     'a',
