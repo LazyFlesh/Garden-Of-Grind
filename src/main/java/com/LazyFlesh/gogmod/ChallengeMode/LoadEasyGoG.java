@@ -36,6 +36,7 @@ public class LoadEasyGoG extends ModeLoader {
 
     public LoadEasyGoG() {
         GardenOfGrindMod.LOG.info("Loading Easy Garden of Grind");
+        modeName = "Garden of Grindless";
         this.loadQuestlines();
     }
 

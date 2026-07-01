@@ -1,5 +1,6 @@
 package com.LazyFlesh.gogmod.ChallengeMode;
 
+import static com.dreammaster.scripts.IScriptLoader.missing;
 import static gregtech.api.enums.Mods.AppliedEnergistics2;
 import static gregtech.api.recipe.RecipeMaps.centrifugeRecipes;
 import static gregtech.api.util.GTModHandler.getModItem;
@@ -40,6 +41,7 @@ public class LoadSkyblock extends ModeLoader {
 
     public LoadSkyblock() {
         GardenOfGrindMod.LOG.info("Loading Skyblock");
+        modeName = "Skyblock";
         this.loadQuestlines();
     }
 
@@ -139,10 +141,15 @@ public class LoadSkyblock extends ModeLoader {
                     Items.stick));
 
             GameRegistry.addRecipe(
-                new ShapelessUniversalRecipe(
+                new ShapedUniversalRecipe(
                     GoGItemList.GravelDust.get(1),
+                    "ba ",
+                    "   ",
+                    "   ",
+                    'a',
                     "craftingToolHardHammer",
-                    new ItemStack(Item.getItemFromBlock(Blocks.gravel), 1)));
+                    'b',
+                    getModItem(Mods.Minecraft.ID, "gravel", 1, 0, missing)));
 
             GameRegistry.addRecipe(
                 new ShapelessUniversalRecipe(

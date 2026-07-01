@@ -8,6 +8,7 @@ public class LoadQuestlessGoG extends ModeLoader {
 
     public LoadQuestlessGoG() {
         GardenOfGrindMod.LOG.info("Loading Questless Garden of Grind");
+        modeName = "Questless Garden of Grind";
         // disable rewards for questless gog
         BQ_Settings.noRewards = true;
         loadQuestlines();
