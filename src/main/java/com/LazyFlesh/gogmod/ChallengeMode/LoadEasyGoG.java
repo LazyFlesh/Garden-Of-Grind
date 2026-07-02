@@ -10,16 +10,15 @@ import static gtPlusPlus.api.recipe.GTPPRecipeMaps.multiblockRockBreakerRecipes;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.oredict.ShapedOreRecipe;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 import com.LazyFlesh.gogmod.GardenOfGrindMod;
 import com.LazyFlesh.gogmod.loaders.GoGItemList;
 import com.dreammaster.main.MainRegistry;
-import com.dreammaster.recipes.ShapedUniversalRecipe;
-import com.dreammaster.recipes.ShapelessUniversalRecipe;
 import com.dreammaster.scripts.IngredientFactory;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -43,7 +42,7 @@ public class LoadEasyGoG extends ModeLoader {
         try {
             if (Mods.CropsNH.isModLoaded()) {
                 GameRegistry.addRecipe(
-                    new ShapelessUniversalRecipe(
+                    new ShapelessOreRecipe(
                         getModItem(Mods.CropsNH.getID(), "cropSticks", 1),
                         new ItemStack(Items.bone, 1),
                         new ItemStack(Items.bone, 1),
@@ -51,7 +50,7 @@ public class LoadEasyGoG extends ModeLoader {
                         new ItemStack(Items.bone, 1)));
 
                 GameRegistry.addRecipe(
-                    new ShapelessUniversalRecipe(
+                    new ShapelessOreRecipe(
                         getModItem(Mods.CropsNH.getID(), "cropSticks", 1),
                         new ItemStack(Items.arrow, 1),
                         new ItemStack(Items.arrow, 1),
@@ -59,7 +58,7 @@ public class LoadEasyGoG extends ModeLoader {
                         new ItemStack(Items.arrow, 1)));
             }
             GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(
+                new ShapedOreRecipe(
                     GoGItemList.ThermiteBucket.get(1),
                     "abc",
                     "abc",
@@ -74,15 +73,15 @@ public class LoadEasyGoG extends ModeLoader {
                     new ItemStack(Items.bucket, 1)));
 
             GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(
+                new ShapedOreRecipe(
                     GoGItemList.GravelDust.get(1),
-                    "a  ",
-                    "b  ",
+                    "ab ",
+                    "   ",
                     "   ",
                     'a',
                     "craftingToolHardHammer",
                     'b',
-                    new ItemStack(Item.getItemFromBlock(Blocks.gravel), 1)));
+                    getModItem(Mods.Minecraft.ID, "gravel", 1, 0, missing)));
         } catch (Exception e) {
             MainRegistry.LOGGER.error("A Garden of Grind Skyblock recipe went wrong:");
             e.printStackTrace();

@@ -53,12 +53,6 @@ public class CommonProxy {
 
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)
     public void init(FMLInitializationEvent event) {
-        // if bm is loaded, override the meteors to ChallengeMode default (unless disabled)
-        if (bloodMagic && !GeneralConfig.disableOverwrite) meteors.overrideConfig();
-    }
-
-    // postInit "Handle interaction with other mods, complete your setup based on this." (Remove if not needed)
-    public void postInit(FMLPostInitializationEvent event) {
         switch (GeneralConfig.challengeMode) {
             case 1 -> LoadSkyblock.registerRecipes();
             case 2 -> LoadEasyGoG.registerRecipes();
@@ -66,7 +60,12 @@ public class CommonProxy {
 
             default -> LoadGoG.registerRecipes();
         }
+        // if bm is loaded, override the meteors to ChallengeMode default (unless disabled)
+        if (bloodMagic && !GeneralConfig.disableOverwrite) meteors.overrideConfig();
     }
+
+    // postInit "Handle interaction with other mods, complete your setup based on this." (Remove if not needed)
+    public void postInit(FMLPostInitializationEvent event) {}
 
     // register server commands in this event handler (Remove if not needed)
     public void serverStarting(FMLServerStartingEvent event) {

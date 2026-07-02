@@ -17,13 +17,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.oredict.ShapedOreRecipe;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 import com.LazyFlesh.gogmod.GardenOfGrindMod;
 import com.LazyFlesh.gogmod.loaders.GoGItemList;
 import com.dreammaster.item.NHItemList;
 import com.dreammaster.main.MainRegistry;
-import com.dreammaster.recipes.ShapedUniversalRecipe;
-import com.dreammaster.recipes.ShapelessUniversalRecipe;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import gregtech.api.enums.GTValues;
@@ -50,7 +50,7 @@ public class LoadSkyblock extends ModeLoader {
         try {
             if (Mods.CropsNH.isModLoaded()) {
                 GameRegistry.addRecipe(
-                    new ShapelessUniversalRecipe(
+                    new ShapelessOreRecipe(
                         getModItem(Mods.CropsNH.getID(), "cropSticks", 1),
                         new ItemStack(Items.bone, 1),
                         new ItemStack(Items.bone, 1),
@@ -58,7 +58,7 @@ public class LoadSkyblock extends ModeLoader {
                         new ItemStack(Items.bone, 1)));
 
                 GameRegistry.addRecipe(
-                    new ShapelessUniversalRecipe(
+                    new ShapelessOreRecipe(
                         getModItem(Mods.CropsNH.getID(), "cropSticks", 1),
                         new ItemStack(Items.arrow, 1),
                         new ItemStack(Items.arrow, 1),
@@ -66,7 +66,7 @@ public class LoadSkyblock extends ModeLoader {
                         new ItemStack(Items.arrow, 1)));
             }
             GameRegistry.addRecipe(
-                new ShapelessUniversalRecipe(
+                new ShapelessOreRecipe(
                     GoGItemList.VolatileMass.get(1),
                     new ItemStack(Items.fire_charge, 1),
                     new ItemStack(Items.coal, 1),
@@ -74,7 +74,7 @@ public class LoadSkyblock extends ModeLoader {
                     new ItemStack(Items.bone, 1)));
 
             GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(
+                new ShapedOreRecipe(
                     GoGItemList.WateryMass.get(1),
                     "aa ",
                     "aa ",
@@ -83,27 +83,15 @@ public class LoadSkyblock extends ModeLoader {
                     NHItemList.MaceratedPlantmass.get(1)));
 
             if (Mods.PamsHarvestCraft.isModLoaded()) GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(GoGItemList.WateryMass.get(1), "aaa", "aaa", "aaa", 'a', "listAlljuice"));
+                new ShapedOreRecipe(GoGItemList.WateryMass.get(1), "aaa", "aaa", "aaa", 'a', "listAlljuice"));
 
             GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(
-                    NHItemList.MaceratedPlantmass.get(1),
-                    "aaa",
-                    "a a",
-                    "aaa",
-                    'a',
-                    "treeSapling"));
+                new ShapedOreRecipe(NHItemList.MaceratedPlantmass.get(1), "aaa", "a a", "aaa", 'a', "treeSapling"));
             GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(
-                    NHItemList.MaceratedPlantmass.get(1),
-                    "aaa",
-                    "a a",
-                    "aaa",
-                    'a',
-                    "treeLeaves"));
+                new ShapedOreRecipe(NHItemList.MaceratedPlantmass.get(1), "aaa", "a a", "aaa", 'a', "treeLeaves"));
             if (Mods.PamsHarvestCraft.isModLoaded()) {
                 GameRegistry.addRecipe(
-                    new ShapedUniversalRecipe(
+                    new ShapedOreRecipe(
                         NHItemList.MaceratedPlantmass.get(1),
                         "aaa",
                         "a a",
@@ -111,7 +99,7 @@ public class LoadSkyblock extends ModeLoader {
                         'a',
                         "listAllveggie"));
                 GameRegistry.addRecipe(
-                    new ShapedUniversalRecipe(
+                    new ShapedOreRecipe(
                         NHItemList.MaceratedPlantmass.get(1),
                         "aaa",
                         "a a",
@@ -119,7 +107,7 @@ public class LoadSkyblock extends ModeLoader {
                         'a',
                         "listAllfruit"));
                 GameRegistry.addRecipe(
-                    new ShapedUniversalRecipe(
+                    new ShapedOreRecipe(
                         NHItemList.MaceratedPlantmass.get(1),
                         "aaa",
                         "a a",
@@ -128,10 +116,10 @@ public class LoadSkyblock extends ModeLoader {
                         "listAllmushroom"));
             }
             GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(NHItemList.MaceratedPlantmass.get(1), "aaa", "a a", "aaa", 'a', "sugarcane"));
+                new ShapedOreRecipe(NHItemList.MaceratedPlantmass.get(1), "aaa", "a a", "aaa", 'a', "sugarcane"));
 
             GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(
+                new ShapedOreRecipe(
                     MetaGeneratedTool01.INSTANCE
                         .getToolWithStats(IDMetaTool01.HARDHAMMER.ID, 1, Materials.Flint, Materials.Wood, null),
                     "XX ",
@@ -143,9 +131,9 @@ public class LoadSkyblock extends ModeLoader {
                     Items.stick));
 
             GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(
+                new ShapedOreRecipe(
                     GoGItemList.GravelDust.get(1),
-                    "ab ",
+                    "ba ",
                     "   ",
                     "   ",
                     'a',
@@ -154,13 +142,13 @@ public class LoadSkyblock extends ModeLoader {
                     getModItem(Mods.Minecraft.ID, "gravel", 1, 0, missing)));
 
             GameRegistry.addRecipe(
-                new ShapelessUniversalRecipe(
+                new ShapelessOreRecipe(
                     GoGItemList.SiltDust.get(1),
                     "craftingToolHardHammer",
-                    new ItemStack(Item.getItemFromBlock(Blocks.sand), 1)));
+                    new ItemStack(Blocks.sand)));
 
             GameRegistry.addRecipe(
-                new ShapedUniversalRecipe(
+                new ShapedOreRecipe(
                     GoGItemList.ThermiteBucket.get(1),
                     "abc",
                     "abc",
