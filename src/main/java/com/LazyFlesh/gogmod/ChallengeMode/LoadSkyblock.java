@@ -248,23 +248,7 @@ public class LoadSkyblock extends ModeLoader {
             .duration(16 * TICKS)
             .eut(TierEU.RECIPE_ULV)
             .addTo(mixerNonCellRecipes);
-
-        GTValues.RA.stdBuilder()
-            .itemInputs(new ItemStack(Item.getItemFromBlock(Blocks.gravel), 2, WILDCARD))
-            .itemOutputs(GTOreDictUnificator.get(OrePrefixes.crushed, Materials.Magnetite, 3))
-            .circuit(1)
-            .duration(5 * TICKS)
-            .eut(TierEU.RECIPE_ULV)
-            .addTo(simpleWasherRecipes);
-
-        GTValues.RA.stdBuilder()
-            .itemInputs(new ItemStack(Item.getItemFromBlock(Blocks.sand), 2, WILDCARD))
-            .itemOutputs(GTOreDictUnificator.get(OrePrefixes.dustImpure, Materials.CassiteriteSand, 3))
-            .circuit(1)
-            .duration(5 * TICKS)
-            .eut(TierEU.RECIPE_ULV)
-            .addTo(simpleWasherRecipes);
-
+        
         if (Mods.AppliedEnergistics2.isModLoaded()) {
             GTValues.RA.stdBuilder()
                 .itemInputs(GTOreDictUnificator.get(OrePrefixes.dust, Materials.CertusQuartz, 1L))
