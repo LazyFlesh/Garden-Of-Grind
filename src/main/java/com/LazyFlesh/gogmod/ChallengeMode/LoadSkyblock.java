@@ -245,7 +245,7 @@ public class LoadSkyblock extends ModeLoader {
             .itemOutputs(new ItemStack(Item.getItemFromBlock(Blocks.cobblestone), 1))
             .fluidInputs(new FluidStack(FluidRegistry.WATER, 10), new FluidStack(FluidRegistry.LAVA, 0))
             .circuit(1)
-            .duration(50 * TICKS)
+            .duration(16 * TICKS)
             .eut(TierEU.RECIPE_ULV)
             .addTo(mixerNonCellRecipes);
 
