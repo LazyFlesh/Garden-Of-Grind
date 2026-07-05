@@ -9,7 +9,6 @@ import static gregtech.api.util.GTRecipeBuilder.TICKS;
 import static gregtech.api.util.GTRecipeBuilder.WILDCARD;
 import static gtPlusPlus.api.recipe.GTPPRecipeMaps.mixerNonCellRecipes;
 import static gtPlusPlus.api.recipe.GTPPRecipeMaps.multiblockRockBreakerRecipes;
-import static gtPlusPlus.api.recipe.GTPPRecipeMaps.simpleWasherRecipes;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -184,12 +183,12 @@ public class LoadSkyblock extends ModeLoader {
         GTValues.RA.stdBuilder()
             .itemInputs(new ItemStack(Item.getItemFromBlock(Blocks.gravel), 1, WILDCARD))
             .itemOutputs(
-                GTOreDictUnificator.get(OrePrefixes.crushed, Materials.VanadiumMagnetite, 1),
+                GTOreDictUnificator.get(OrePrefixes.crushed, Materials.Magnetite, 1),
                 GTOreDictUnificator.get(OrePrefixes.crushed, Materials.Chalcopyrite, 1),
                 GTOreDictUnificator.get(OrePrefixes.dustImpure, Materials.Galena, 1),
                 GTOreDictUnificator.get(OrePrefixes.crushed, Materials.Coal, 1),
                 GTOreDictUnificator.get(OrePrefixes.crushed, Materials.Diamond, 1),
-                GTOreDictUnificator.get(OrePrefixes.dustImpure, Materials.Graphite, 1))
+                GTOreDictUnificator.get(OrePrefixes.dustImpure, Materials.VanadiumMagnetite, 1))
             .outputChances(50_00, 40_00, 25_00, 15_00, 10_00, 10_00)
             .circuit(2)
             .duration(1 * SECONDS)
@@ -218,8 +217,8 @@ public class LoadSkyblock extends ModeLoader {
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Sulfur, 1),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.GarnetSand, 1),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Silver, 1),
-                GTOreDictUnificator.get(OrePrefixes.dustImpure, Materials.Asbestos, 1),
-                GTOreDictUnificator.get(OrePrefixes.dustImpure, Materials.Mica, 1))
+                GTOreDictUnificator.get(OrePrefixes.dust, Materials.GraniticMineralSand, 1),
+                GTOreDictUnificator.get(OrePrefixes.dust, Materials.BasalticMineralSand, 1))
             .outputChances(50_00, 40_00, 25_00, 15_00, 10_00, 10_00)
             .circuit(1)
             .duration(1 * SECONDS)
@@ -233,8 +232,8 @@ public class LoadSkyblock extends ModeLoader {
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Spessartine, 1),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Electrotine, 1),
                 GTOreDictUnificator.get(OrePrefixes.dust, Materials.Graphite, 1),
-                GTOreDictUnificator.get(OrePrefixes.dust, Materials.GraniticMineralSand, 1),
-                GTOreDictUnificator.get(OrePrefixes.dust, Materials.BasalticMineralSand, 1))
+                GTOreDictUnificator.get(OrePrefixes.dustImpure, Materials.Asbestos, 1),
+                GTOreDictUnificator.get(OrePrefixes.dustImpure, Materials.Mica, 1))
             .outputChances(50_00, 30_00, 25_00, 25_00, 10_00, 10_00)
             .circuit(2)
             .duration(1 * SECONDS)
@@ -248,7 +247,7 @@ public class LoadSkyblock extends ModeLoader {
             .duration(16 * TICKS)
             .eut(TierEU.RECIPE_ULV)
             .addTo(mixerNonCellRecipes);
-        
+
         if (Mods.AppliedEnergistics2.isModLoaded()) {
             GTValues.RA.stdBuilder()
                 .itemInputs(GTOreDictUnificator.get(OrePrefixes.dust, Materials.CertusQuartz, 1L))
