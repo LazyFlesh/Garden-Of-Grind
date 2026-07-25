@@ -1,6 +1,5 @@
 package com.LazyFlesh.gogmod;
 
-import com.gtnewhorizon.gtnhlib.config.ConfigurationManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGameOver;
 import net.minecraft.client.settings.KeyBinding;
@@ -34,7 +33,7 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void init(FMLInitializationEvent event) {
         super.init(event);
-        toggleInstantRespawn = new KeyBinding("gog.InstantRespawn.keydesc", Keyboard.KEY_END, "Garden of Glass");
+        toggleInstantRespawn = new KeyBinding("gog.InstantRespawn.keydesc", Keyboard.KEY_END, "Garden of Grind");
         ClientRegistry.registerKeyBinding(toggleInstantRespawn);
     }
 
