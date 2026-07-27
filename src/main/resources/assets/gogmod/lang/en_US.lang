@@ -18,3 +18,7 @@ gog.VolatileMass.desc.1=Maybe tossing it in a fire will melt it...
 gog.VolatileMass.desc.2=Toss in fire to make flowing lava.
 gog.WateryMass.desc.1=Maybe tossing it in a fire will denature it...
 gog.WateryMass.desc.2=Toss in fire to make a water source.
+
+# Keybind descriptions
+
+gog.InstantRespawn.keydesc=Instant Respawn toggle
