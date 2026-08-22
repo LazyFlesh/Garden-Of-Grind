@@ -5,7 +5,7 @@ Well... almost. If you want the quest pages, add a BQApi, https://github.com/ABK
 
 If using this, make no other gog config changes. You do not need to modify Thaumcraft.cfg, Witchery.cfg, GregTech.cfg, or Hodgepodge. All changes are done internally by this addon.
 
-Contains a questbook page (TODO), guideNH pages (TODO), respawn/death gui skip under a keybind toggle (default end. Thank you @Irgendwer01), and recipe changes based on chosen challengeMode (mostly done).
+Contains a questbook page (TODO), guideNH pages (TODO), respawn/death gui skip under a keybind toggle (default end. Thank you @Irgendwer01), recipe changes based on chosen challengeMode (mostly done), and a keybind to turn on auto-respawn.
 
 ## Modes
 
